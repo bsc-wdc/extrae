@@ -590,10 +590,11 @@ int pthread_mutex_unlock (pthread_mutex_t *m)
 	return res;
 }
 
+#if 0
 int pthread_cond_signal (pthread_cond_t *c)
 {
 	int res = 0;
-
+    
 	if (pthread_cond_signal_real == NULL)
 		GetpthreadHookPoints(0);
 
@@ -735,6 +736,7 @@ int pthread_cond_timedwait (pthread_cond_t *c, pthread_mutex_t *m, const struct 
 
 	return res;
 }
+#endif
 
 int pthread_rwlock_rdlock (pthread_rwlock_t *l)
 {
