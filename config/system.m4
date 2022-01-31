@@ -106,7 +106,7 @@ AC_DEFUN([AX_SYSTEM_TYPE],
 	             AC_DEFINE([ARCH_SPARC64], [1], [Define if architecture is SPARC64]) ;;
 	  riscv64  )
 	             Architecture="riscv"
-				 if test "${target_cpu}" == "riscv64" ; then
+		     if test "${target_cpu}" == "riscv64" ; then
 	                AC_DEFINE([ARCH_RISCV64], [1], [Define if architecture is RISCV64])
 	             fi
 	             ;;
@@ -138,8 +138,8 @@ AC_DEFUN([AX_SYSTEM_TYPE],
 	AM_CONDITIONAL(ARCH_ALPHA,   test "${Architecture}"    = "alpha"   )
 	AM_CONDITIONAL(ARCH_MIPS,    test "${Architecture}"    = "mips"    )
 	AM_CONDITIONAL(ARCH_SPARC64, test "${Architecture}"    = "sparc64" )
-	AM_CONDITIONAL(ARCH_RISCV64, test "${Architecture}"    = "riscv64"
-    AM_CONDITIONAL(OS_ANDROID,   test "${OperatingSystem}" = "android" )
+	AM_CONDITIONAL(ARCH_RISCV64, test "${Architecture}"    = "riscv64" )
+        AM_CONDITIONAL(OS_ANDROID,   test "${OperatingSystem}" = "android" )
 	AM_CONDITIONAL(OS_LINUX,     test "${OperatingSystem}" = "linux"   )
 	AM_CONDITIONAL(OS_AIX,       test "${OperatingSystem}" = "aix"     )
 	AM_CONDITIONAL(OS_DEC,       test "${OperatingSystem}" = "dec"     )
